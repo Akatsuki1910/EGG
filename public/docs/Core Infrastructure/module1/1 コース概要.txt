@@ -1,0 +1,18 @@
+「Google Cloud Fundamentals:
+Core Infrastructure」にようこそ このコースでは
+Google Cloudの概要を学べます Google Cloudのサービスには
+コンピューティング、ストレージ ビッグデータ、機械学習と
+ウェブ、モバイル、分析 バックエンドソリューションのための
+アプリサービスがあります ビデオ、クイズ、ハンズオンラボを通じて Google Cloudの価値と ソリューションを
+ビジネス戦略で利用する方法を学びます 本コースの対象者は
+Google Cloudにアプリをデプロイし アプリ環境を構築する予定の ソリューションデベロッパー
+システム運用担当者 ソリューションアーキテクトを
+想定しています Google Cloudを評価する
+意思決定者にも役立つコースです 本日のコースでは
+Google Cloudに特化した サービスやコンセプトについて学べます 基礎レベルのコースなので クラウドテクノロジーが初めての人を
+対象とした内容もあります このコースに前提条件はありませんが アプリ開発、Linux OS、システム運用 データ分析、機械学習などの知識があると
+テクノロジーの理解に役立ちます 主な学習目標は５つあります 本コースで学ぶことは Google Cloudのプロダクトとサービスの
+目的と価値 App Engine、Kubernetes Engine
+Compute Engineなど Google Cloudのアプリ環境の選び方 Cloud Storage、Cloud SQL
+Cloud Bigtableなど Google Cloudの
+ストレージオプションの選び方 Google Cloudサービスの操作方法 Google Cloudの実際の用途です それでは始めましょう
