@@ -1,18 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const posts = await Astro.glob("../../public/docs/**/*.txt");
+const posts = await Astro.glob("../docs/**/*.txt");
 const filePath = posts.map((v) => v.default);
 const b = await Promise.all(
   filePath.map((path) =>
-    fetch(`${Astro.url.origin}${path.replace("/public", "")}`).then(
-      (response) => response.text()
-    )
+    fetch(`${Astro.url.origin}${path}`).then((response) => response.text())
   )
 );
 
 const textPath = filePath.map((path) =>
-  path.replace("/public/docs/", "").split("/")
+  path.replace("/src/docs/", "").split("/")
 );
 let dMap = new Map();
 for (let i = 0; i < textPath.length; i++) {
