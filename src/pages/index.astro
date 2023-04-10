@@ -1,81 +1,68 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+
+const posts = await Astro.glob("../../public/docs/**/*.txt");
+const filePath = posts.map((v) => v.default);
+const b = await Promise.all(
+  filePath.map((path) =>
+    fetch(`${Astro.url.origin}${path.replace("/public", "")}`).then(
+      (response) => response.text()
+    )
+  )
+);
+
+const textPath = filePath.map((path) =>
+  path.replace("/public/docs/", "").split("/")
+);
+let dMap = new Map();
+for (let i = 0; i < textPath.length; i++) {
+  let e = dMap;
+  for (let l = 0; l < textPath[i].length; l++) {
+    const t = textPath[i][l];
+    if (t.includes(".txt")) {
+      const f = t.replace(".txt", "").split(" ").slice(1).join(" ").trim();
+      e.set(i, f);
+    } else if (!e.has(t)) {
+      e.set(t, new Map());
+      e = e.get(t);
+    } else {
+      e = e.get(t);
+    }
+  }
+}
+
+const tags = [...new Array(3)].map((_, i) => `h${i + 2}`);
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout>
+  <main class="main">
+    <h1>E.G.G.</h1>
+    {
+      (() => {
+        const doms: HTMLElement[] = [];
+        const getData = (d: any, i: number) => {
+          const keys = d.keys();
+          for (let key of keys) {
+            const data = d.get(key);
+            const TT = tags[i];
+            if (typeof data === "object") {
+              doms.push(<TT>{key}</TT>);
+              getData(data, i + 1);
+            } else {
+              doms.push(<TT>{data}</TT>);
+              doms.push(<p>{b.shift()}</p>);
+            }
+          }
+        };
+        getData(dMap, 0);
+        return doms;
+      })()
+    }
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  .main {
+    /* white-space: pre-line; */
+  }
 </style>
