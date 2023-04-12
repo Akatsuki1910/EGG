@@ -1,16 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import fs from "node:fs/promises";
+import fg from "fast-glob";
 
-const posts = await Astro.glob("../docs/**/*.txt");
-const filePath = posts.map((v) => v.default);
-const b = await Promise.all(
-  filePath.map((path) =>
-    fetch(`${Astro.url.origin}${path}`).then((response) => response.text())
-  )
-);
+const filePath = fg.sync("./src/docs/**/*.txt", {
+  onlyFiles: true,
+});
+
+const b = await Promise.all(filePath.map((path) => fs.readFile(path, "utf-8")));
 
 const textPath = filePath.map((path) =>
-  path.replace("/src/docs/", "").split("/")
+  path.replace("./src/docs/", "").split("/")
 );
 let dMap = new Map();
 for (let i = 0; i < textPath.length; i++) {
