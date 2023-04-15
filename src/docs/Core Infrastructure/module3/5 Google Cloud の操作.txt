@@ -1,32 +1,31 @@
-Google Cloudを使用する方法は
-４つあります Cloud Console、Cloud SDKとCloud Shell API、
-Cloud Consoleモバイルアプリです １つずつ見ていきましょう 最初はGoogle Cloud Consoleです Google CloudのGUIとなる
-シンプルなウェブベースのインターフェースで デプロイ、スケーリング
-本番環境の問題の診断に役立ちます Cloud Consoleを使用すると リソースの検索、健全性確認、詳細な管理
-予算に基づく使用金額の抑制など さまざまな作業を簡単に行えます 検索機能では
-リソースを素早く検索し ブラウザからSSHを使用して
-インスタンスに接続できます ２つめはCloud SDKとCloud Shellの使用です Cloud SDKは Google Cloudでホストされる
-リソースやアプリの管理に使用できる ツールのセットです これに含まれるgcloudツールは Google Cloudのプロダクトとサービス用の
-メインCLIを提供します gsutilではCloud Storageに
-コマンドラインでアクセスでき bqはBigQuery用のCLIツールです Cloud SDKをインストールすると
-すべてのツールがbinディレクトリに置かれます Cloud Shellではブラウザから
-CLIでクラウドリソースにアクセスできます Cloud ShellはDebianベースのVMで
-５GBの永続的なホームディレクトリがあり Google Cloudのプロジェクトやリソースを
-簡単に管理できます Cloud SDK gcloudコマンドなどの
-ユーティリティはインストール済みで 最新の認証済みの状態で使用できます Google Cloudにアクセスする
-３つめの方法はAPIの使用です Google Cloudの各サービスにはAPIが用意され
-コードでサービスを制御できます Cloud Consoleには
-Google APIs Explorerというツールがあり 利用可能なAPIと
-バージョンを確認できます ユーザー認証が必要ですが
-APIをインタラクティブに試せます APIが確認でき
-それを使用するアプリをビルドするとします 新規にコーディングが必要でしょうか？
-いいえ Cloudクライアントライブラリと
-APIクライアントライブラリが 多数の言語で用意されており コードからGoogle Cloudを容易に呼び出せます 現在ライブラリで対応している言語は
-Java、Python PHP、C#、Go Node.js、Ruby、C++です 最後の４つめの方法は Cloud Consoleモバイルアプリの使用です Compute Engineインスタンスの開始と停止 SSH接続、ログの表示ができます Cloud SQLインスタンスの
-停止と開始もできます App Engineにデプロイされたアプリも管理し エラーの表示、デプロイのロールバック、
-トラフィック分割の変更ができます Cloud Consoleモバイルアプリでは プロジェクトの課金情報と
-プロジェクトの予算超過アラートを確認できます CPU使用率、ネットワーク使用率
-１秒あたりのリクエスト数、サーバーエラーなど 主な指標を表示する
-カスタマイズ可能なグラフも設定できます モバイルアプリで
-アラートとインシデントも管理できます Cloud Consoleモバイルアプリは
-このURLからダウンロードできます
+Google Cloudを使用する方法は４つあります
+Cloud Console、Cloud SDKとCloud Shell API、Cloud Consoleモバイルアプリです
+１つずつ見ていきましょう
+最初はGoogle Cloud Consoleです
+Google CloudのGUIとなるシンプルなウェブベースのインターフェースで、デプロイ、スケーリング、本番環境の問題の診断に役立ちます
+Cloud Consoleを使用すると、リソースの検索、健全性確認、詳細な管理、予算に基づく使用金額の抑制など、さまざまな作業を簡単に行えます
+検索機能ではリソースを素早く検索し、ブラウザからSSHを使用してインスタンスに接続できます
+２つめはCloud SDKとCloud Shellの使用です
+Cloud SDKは Google Cloudでホストされる、リソースやアプリの管理に使用できるツールのセットです
+これに含まれるgcloudツールは、Google Cloudのプロダクトとサービス用のメインCLIを提供します
+gsutilではCloud Storageにコマンドラインでアクセスでき、bqはBigQuery用のCLIツールです
+Cloud SDKをインストールするとすべてのツールがbinディレクトリに置かれます
+Cloud Shellではブラウザから、CLIでクラウドリソースにアクセスできます
+Cloud ShellはDebianベースのVMで、５GBの永続的なホームディレクトリがあり、Google Cloudのプロジェクトやリソースを簡単に管理できます
+Cloud SDK gcloudコマンドなどのユーティリティはインストール済みで、最新の認証済みの状態で使用できます
+Google Cloudにアクセスする３つめの方法はAPIの使用です
+Google Cloudの各サービスにはAPIが用意され、コードでサービスを制御できます
+Cloud Consoleには、Google APIs Explorerというツールがあり、利用可能なAPIとバージョンを確認できます
+ユーザー認証が必要ですが、APIをインタラクティブに試せます
+APIが確認でき、それを使用するアプリをビルドするとします
+新規にコーディングが必要でしょうか？
+いいえ、CloudクライアントライブラリとAPIクライアントライブラリが、多数の言語で用意されており、コードからGoogle Cloudを容易に呼び出せます
+現在ライブラリで対応している言語は、Java、Python、PHP、C#、Go、Node.js、Ruby、C++です
+最後の４つめの方法は、Cloud Consoleモバイルアプリの使用です
+Compute Engineインスタンスの開始と停止、SSH接続、ログの表示ができます
+Cloud SQLインスタンスの停止と開始もできます
+App Engineにデプロイされたアプリも管理し、エラーの表示、デプロイのロールバック、トラフィック分割の変更ができます
+Cloud Consoleモバイルアプリでは、プロジェクトの課金情報とプロジェクトの予算超過アラートを確認できます
+CPU使用率、ネットワーク使用率、１秒あたりのリクエスト数、サーバーエラーなど、主な指標を表示するカスタマイズ可能なグラフも設定できます
+モバイルアプリでアラートとインシデントも管理できます
+Cloud ConsoleモバイルアプリはこのURLからダウンロードできます
