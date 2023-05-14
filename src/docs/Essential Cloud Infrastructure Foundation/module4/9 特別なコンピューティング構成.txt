@@ -1,0 +1,83 @@
+As I mentioned earlier, a preemptive VM
+is an instance that you can create and run at a much lower cost
+than normal instances. See whether you can make your application
+function completely on preemptible VMs. Because a 60-91% discount is a significant
+investment in your application. Now, just to reiterate these VMs
+might be preempted at any time and there's no charge if that
+happens within the first minute. Also, preemptible VMs are only
+going to live for up to 24 hours. And you only get a 32nd notification
+before the machine is preempted. >> It's also worth noting,
+that there are no live migrations nor automatic restarts in preemptible VM's. But something that we might want to
+highlight is that you can actually create monitoring and load balancers that can start up new
+preemptible VMs in case of a failure. In other words, there are external ways to keep restarting
+preemptible VMs if you need to. One major use case for preemptible
+VMS is running batch processing jobs. If some of those instances terminate
+during processing, the job slows but it does not completely stop. Therefore, preemptible instances, complete
+your batch processing tasks without placing additional workload
+on your existing emphasis and without requiring you to pay full
+price for additional normal instances. >> Spot VMs are the latest
+version of preemptible VMs. Spot VMs are virtual machine instances
+with the Spot provisioning model. New and existing preemptible VMs
+continue to be supported and preemptible VMs use the same
+pricing model as Spot VMs. However, Spot VMs provide new features
+that preemptible VMs do not support. For example,
+preemptible VMs can only run for up to 24 hours at a time, but
+Spot VMs do not have a maximum run time. Like preemptible VMs compute
+engine might preemptible VMs, Spot VMs if it needs to reclaim
+those resources for other tasks. The probability that compute engine
+stops Spot VMs for a system event, is generally low but might vary from
+a day to day and from zone to zone, depending on current conditions. Spot VMs are finite
+compute engine resources. So, they might not always be available. Like preemptible VMs,
+it's worth noting that Spot VMs can't live migrate to become standard
+VMs while they are running or be set to automatically restart
+when there is a maintenance event. There are many best practices which can
+help you get the most of using Spot VMs. For example, resources for
+spot VMs come out of access and backup Google cloud capacity. Capacity for spot VMs is often easier
+to get for smaller machine types. Meaning machine types with less
+resources like VCPU and memory. >> If you have workloads that require
+physical isolation from other workloads or virtual machines in order to
+meet compliance requirements, You want to consider sole-tenant nodes. A sole-tenant node is a physical
+compute engine server that is dedicated to hosting VM instances only for
+your specific project. Use sole-tenant nodes to keep your
+instances physically separated from instances in other projects or to group your instances together
+on the same host hardware. For example, if you have a payment
+processing workload that needs to be isolated to meet
+compliance requirements. The diagram on the left
+shows a normal host with multiple VM instances
+from multiple customers. A sole-tenant node is
+shown on the right and it also has multiple VM instances but
+they all belong to the same project. You can also fill the node with multiple
+smaller VM instances of varying sizes, including custom machine types and
+instances with extended memory. Also, if you have existing
+operating system licenses, you can bring them to compute engine
+using sole-tenant nodes while minimizing the physical core usage
+with the in place restart feature. To learn how to create nodes and
+place your instances on those nodes, see the link section of this video. Another computer option is
+to create a shielded VM. Shielded VMs offer verifiable
+integrity to your VM instances. So, you can be confident that your
+instances haven't been compromised by boot or kernel level malware or root kits. Shielded VMs is the first offering
+in the shielded cloud initiative. The shielded cloud initiative is meant to
+provide an even more secure foundation for all of Google cloud by providing
+verifiable integrity and offering features like VTPM shielding or ceiling that
+help prevent data exfiltration. In order to use these
+shielded VM features, you need to select a shielded image. We'll learn more about
+images in the next section. Confidential VMS are breakthrough
+technology that allows you to encrypt data in use while it's been processed. Google Cloud's approach to
+encrypt data in use is simple, easy to use deployment without making any
+code changes to their applications or having to compromise performance. You can collaborate with anyone all
+while preserving the confidentiality of your data. Confidential virtual machine or confidential VM is a type of
+N2D compute engine VM instance, running on hosts based on the second
+generation of AMD Epyc processors. Code named Rome, using AMD secure
+encrypted virtualization or SEV, confidential VM features built in
+optimization of both performance and security for
+enterprise class high memory workloads. As well as in line memory encryption that
+doesn't introduce significant performance penalties on those workloads. The AMD Rome process or
+family is specifically optimized for compute heavy workloads with high
+memory capacity, high throughput and support for parallel workloads. In addition, AMD SEV provides for
+confidential computing support. With the confidential execution
+environments provided by confidential VM and am de SEV, Google
+Cloud keeps customers sensitive code and other data encrypted in
+memory during processing. Google does not have access
+to the encryption keys. You can select the confidential VM
+service when creating a new VM using the Google Cloud console. The compute engine API or
+the G-cloud command line tool.

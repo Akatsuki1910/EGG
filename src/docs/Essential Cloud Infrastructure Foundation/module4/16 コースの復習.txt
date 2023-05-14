@@ -1,0 +1,9 @@
+「Essential Cloud Infrastructure:Foundation」はこれで終了です
+Compute Engineでの設計方法について理解が深まったのではないでしょうか
+またデモとラボを通じて対象のGCPサービスを、より快適にご利用いただけるようになったかと思います
+次に受講をおすすめするコースは、「Architecting with Google Compute Engine」シリーズの「Essential Cloud Infrastructure:Core Services」です
+このコースではまずCloud IAMについて確認した後、実際にIdentity and Access Managementでリソースの管理を行います
+次にGCPのさまざまなデータストレージサービスを確認してから、その一部を実装します
+それからリソース管理について学び、GCPリソースの課金データの管理と調査を行います
+最後にリソースのモニタリングについて学び、StackdriverサービスでGCPリソースをモニタリングします
+ぜひご利用ください
