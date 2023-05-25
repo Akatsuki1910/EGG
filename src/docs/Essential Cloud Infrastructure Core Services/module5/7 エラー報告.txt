@@ -1,0 +1,7 @@
+Stackdriverのエラー報告機能について説明します
+Error Reportingは、実行中のクラウドサービスで発生したエラーをカウントして分析、集計します
+結果は、並べ替え機能やフィルタリング機能を備えた一元化されたエラー管理画面で確認できます
+またリアルタイム通知を設定して、新しいエラーの検出時に通知できます
+現時点でStackdriver Error Reportingが一般提供されているのは、App Engineスタンダード環境、App Engineフレキシブル環境のベータ版機能、Compute Engine、AWS EC2です
+プログラミング言語については、例外スタックトレースパーサーがGo、Java、.NET、Node.js、PHP、Python、Rubyを解析できます
+なおApp Engineについて言及したのは以降のラボで、App EngineにデプロイされたアプリでError Reportingを使用するためです

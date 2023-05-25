@@ -1,0 +1,8 @@
+「Essential Cloud Infrastructure: Core Services」のコースでした
+IAMの管理、GCPのさまざまなデータストレージサービスの選択、GCPリソースに対する請求の管理、リソースのモニタリングについて、ご理解いただけましたでしょうか
+またデモとラボを通じて、各GCPサービスの操作にも慣れていただけたと思います
+次におすすめするのは、「Architecting with Google Compute Engine」シリーズの「Elastic Cloud Infrastructure: Scaling and Automation」です
+このコースでは、ネットワークを相互接続するさまざまな方法について説明し、インフラをGCPに接続できるようにします
+次にGCPのロードバランシングと、自動スケーリングのサービスについて学び、実際に操作してみます
+その後Deployment ManagerやTerraformなどのインフラ自動化サービスについて説明し、GCPインフラサービスのデプロイを自動化できるようにします
+最後にGCPで活用できるその他のマネージドサービスについて説明します
