@@ -1,0 +1,3 @@
+このモジュールではGoogle Cloudで利用できる各種ストレージサービスを学びました
+バイナリデータ用のCloud Storage、RDBのCloud SQLとSpanner、NoSQL DBのCloud BigtableとFirestore、DWHのBigQueryです
+ストレージのさまざまな特徴と、それらの特徴に基づいてデータの保存場所を選ぶ方法も説明しました
