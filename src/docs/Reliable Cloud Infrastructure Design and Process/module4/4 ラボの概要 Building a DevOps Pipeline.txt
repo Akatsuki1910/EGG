@@ -1,0 +1,7 @@
+この最初のラボではDevOpsパイプラインをCloud Source Repositories、Cloud Build、Container Registryを使って作成します
+まずGitリポジトリを作成します
+次にシンプルなPythonアプリを作成して、リポジトリに追加します
+このウェブアプリをCloud Shellでテストした後、Dockerビルドを定義します
+ビルドを定義したら、Cloud Buildを使ってDockerイメージを作成しContainer Registryに保存します
+続いて、トリガーによるビルドの自動化を確認します
+最後に、トリガーをテストするためにプログラムに変更を加え、変更をGitリポジトリにpushします

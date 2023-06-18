@@ -1,0 +1,4 @@
+このモジュールでは、Cloudリソースのデプロイを自動化する際に役立つサービスについて学びました
+Cloud Source Repositoriesと、Cloud Buildトリガー、Container Registryを使用してCIパイプラインを作成しました
+CIパイプラインではソースコードの変更に応じて、Dockerイメージなどのデプロイパッケージを自動的に作成できます
+さらにTerraformというIaCツールでインフラの作成を自動化する方法も確認しました
